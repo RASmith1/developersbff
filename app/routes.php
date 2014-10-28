@@ -27,27 +27,22 @@ Route::get('/listtext/{paragraphs?}', function($paragraphs = '1') {
 	//emmet('ul > li*3') => 
 });
 
-Route::get('/listusers/{number_of_users?}/{gender?}', function($number_of_users = '1', $gender='both') {
-	//return View::make('listusers');
-	/*$gen = new \RandomUser\Generator();
-    $user = $gen->getUsers($number_of_users);
+//
+Route::get('/listusers/{number_of_users?}/{gender?}', function($number_of_users = '10', $gender = 'Both') {
 
-
-	return  Paste\Pre::render($user);*/
-	// The Random User Generator API that is being used is documented
-	// was obtained from: 
+	// The Random User Generator API being used is documented at and obtained from:
 	// http://www.philipwhitt.com/blog/2014/09/php-random-user-generator/40
 	// and is further documented at http://randomuser.me/documentation.html.
-	// There license is a Creative Commons license:
-	// http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en
+	// Creative Commons license: http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en
 	// No Random User Generator API code was modified.
 	$gen = new \RandomUser\Generator();
+	$user = $gen->getUsers($number_of_users);
     
-	if ($gender == both)
+	if ($gender == 'both')
 	{
     	$user = $gen->getUsers($number_of_users);
-	}
-	elseif ($gender == 'females') 
+    }	
+	elseif ($gender == 'female') 
 	{
 		$user = $gen->getFemales($number_of_users);
 	}	
@@ -55,24 +50,13 @@ Route::get('/listusers/{number_of_users?}/{gender?}', function($number_of_users 
 	{
 		$user = $gen->getMales($number_of_users);
 	}
-	
 
-	return $number_of_users;
+	//return  Paste\Pre::render($user);
+	//return 'Number entered was '.$number_of_users.' and gender was '.$gender;
+	return  View::make('listusers')
+	 		 ->with('number_of_users', $number_of_users)
+			 ->with('user', $user);
 
-	if($format == 'json') {
-		return 'JSON Version';
-	}
-	elseif($format == 'pdf') {
-		return 'PDF Version;';
-	}
-	else {
-		return View::make('list')
-		->with('name','Susan')
-		->with('books', $books)
-		->with('query', $query);
-	}
-   
-  
 });
 
 // Display the form for the Lorem Ipsum text
