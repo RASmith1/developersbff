@@ -121,6 +121,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'anlutro\cURL\Laravel\cURLServiceProvider',
 
 	),
 
@@ -188,6 +190,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		'Pre'             => 'Paste\Pre',
+		'cURL'            => 'anlutro\cURL\Laravel\cURL' 
 
 	),
 

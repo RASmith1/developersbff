@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-position: 0;
+    /*background-image: url(../images/backgrounds/background19_big.jpg);
+    background-repeat: round;*/
+    color: black;
+    background-color: #f2f2f2;
+    font-family: calibri, verdana, tahoma, arial, helvetica, sans-serif;
+    /* The right-margin setting below is to account for  */
+    /* centering, given the scrollbar on the right side. */
+    /* margin-right: 19px;*/
+    text-align: center;
+   /* align-content: center;*/
+}
+#wrapper {
+    width: 660px;
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/******************************************************/
+
+/* I added markup below to keep page from moving right or  */
+/* left when scroll bar was removed or added, respectively */
+
+html {
+    overflow-y: scroll;
+}
+
+#my_logo {
+    /*align-self: center;*/
+    margin-bottom: 8px;
+    background-color: #f2f2f2;
+    border-spacing: 10px;
+    border-style: solid;
+    border-color: #4a4a4a;
+    //border-color: #575757;
+    border-width: 10px;
+    border-radius: 2px;
+    width: 160px;
+    height: 100px;
+}
+
+#linkscontainer {
+    text-align: left;
+    list-style: none;
+    align-self: center;
+}
+
+#paragraphscontainer {
+    text-align: left;
+    list-style: none;
+    align-self: center;
+}
+
+#paragraphs {
+    text-align: left;
+    list-style: none;
+/*    margin-left: 25%;*/
+}
+
+.container {
+    width: 90%;
+}
+
+.row {
+    display: table-row;
+    text-align: left;
+}
+
+.headercell {
+    display: table-cell;
+    width: 50%;
+    height: 30px;
+    text-align: left;
+    font-weight: bold;
+    color: #CC0000;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+.blankcell {
+    display: table-cell;
+    width: 50%;
+    height: 30px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.descriptioncell {
+    display: table-cell;
+    width: 280px;
+    height: 40px;
+    text-align: left;
+}
+
+.formcell {
+	color: black;
+}
+
+.githubcell {
+    display: table-cell;
+    width: 280px;
+    height: 40px;
+    text-align: left;
+}
+
+
+/*#header {margin-top: 1em;}
+#header h1 { padding-left: 160px; padding-top: 20px; background-image: url(../images/flag.gif); background-repeat: no-repeat; background-position: left; height: 70px; background-color: #eeeeff;}
+
+#footer { font-size: smaller; background-color: #eeeeff;}
+#footer p { padding: 1em; }
+
+#navigation ul {list-style: none; padding: 0;}
+#navigation ul li a {display: block;text-decoration: none; padding-left: 1em; border: thin solid navy; font-weight: bold;}
+#navigation ul li a:link {display: block;}
+#navigation ul li a:visited {display: block;}
+#navigation ul li a:hover {display: block; border: thin solid white; background-color: navy; color: white;}
+#navigation ul li a:active {display: block;}
+
+#navigation ul li#iamhere a,
+#navigation ul li#iamhere a:link,
+#navigation ul li#iamhere a:visited,
+#navigation ul li#iamhere a:hover { color: #ff0000; background-color: #ffffff; border: thin solid navy;}
+
+body {
+	padding:20px;
+}*/
+/*.logo {
+	width:200px;
+	margin-bottom:20px;
+	display:block;
+}*/
+/*nav ul {
+	list-style-type:none;
+	padding:5px 0px 5px 0px;
+}
+nav ul li {
+	display:inline;
+	margin-right:10px;
+}
+a:link, a:visited, a:active, a:hover {
+	text-decoration:underline;
+}
+.tags {
+	color:grey;
+	font-family:consolas;
+}
+.book {
+	border:1px solid #ccc;
+	padding:10px;
+	padding-top:0px;
+	float:left;
+	width:300px;
+	margin-right:10px;
+	margin-bottom:10px;
+	height:375px;
+}*/

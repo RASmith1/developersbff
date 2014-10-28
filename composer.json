@@ -4,7 +4,12 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"paste/pre": "dev-master",
+		"apoutchika/loremipsum-bundle": "dev-master",
+		"fliglio/web": "dev-master",
+		"randomuser/generator": "dev-master",
+		"anlutro/curl": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

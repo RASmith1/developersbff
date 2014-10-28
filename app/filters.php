@@ -88,3 +88,40 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+# dog day filter August 26th
+
+Route::filter('dogs_day', function()
+{
+	if (true)
+	//if (date('d/m/') == '26/08/')
+	{
+		return "Happy National Dogs Day!!";
+	}
+});
+
+Route::filter('parrots_day', function()
+{
+	if (true)
+	{
+		return "Happy National Parrots Day, squawk!!";
+	}
+});
+
+// This is a filter that is applied to a group of routes
+Route::group(array('before' => 'dogs_day'), function()
+{
+	Route::get('/cats/only', function()
+	{
+		// has dog filter
+		return 'Secret cat club, no dogs allowed! We really mean it!';
+	});
+
+	Route::get('/human/user/{id}', function($id)
+	{
+		// has dog filter
+		return 'Non-dog user id: '.$id;
+	});
+});
+
+

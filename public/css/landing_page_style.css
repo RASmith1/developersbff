@@ -1,0 +1,70 @@
+/* Color palette for site   */
+/*  Burnt Orange:     #c95516 */
+/*  Dark Burnt Orange #c74205; */
+/*  Warm Teal:        #3eb49f */
+/*  Pea Green:        #c2c76e */
+/*  Warm Gray         #948e8e */
+/*  Chocolate         #582f2f */
+
+body {
+    background-color: #c2c76e;
+    font-family: serif;
+    color: #582f2f;
+    font-weight: bold;
+}
+h1 {
+    font-family: sans-serif;
+    color: #c95516;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.give_it_a_try {
+    font-family: sans-serif;
+    color: #c95516;
+    font-weight: bold;
+    font-size: 21px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}   
+h2 {
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+p {
+    color: #582f2f;
+    font-family: serif;
+    background-color: #ffffff;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.example {
+    color: #c95516;
+    font-family: serif;
+    font-weight: bold;
+}
+p#currently {
+    border-style: outset;
+    border-color: #582f2f;
+    border-width: 4px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+fieldset {
+    border-color: #3eb49f;
+    border-width: 2px;
+    margin-top: 5px;
+}
