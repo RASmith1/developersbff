@@ -6,7 +6,7 @@
 
 # **Description sentences**
 P3/Developer's BFF: This Laravel Basics project introduces the student developer to and immerses them 
-in learning the industry-standard skills needed to develop a a Laravel-based website.  These skills include planning the website pages and corresponding routes, installing Composer, incorporating dependencies obtained from packagist.org and/or github, committing modifications to github.com, setting up facades, adjusting environment settings, coding the routes, creating views and templates, using Blade syntax, passing data to views, testing the URLs, and deploying the new website.
+in learning the industry-standard skills needed to develop a Laravel-based website.  These skills include planning the website pages and corresponding routes, installing Composer, incorporating dependencies obtained from packagist.org and/or github, committing modifications to github.com, setting up facades, adjusting environment settings, coding the routes, creating views and templates, using Blade syntax, passing data to views, testing the URLs, and deploying the new website to the server.
 
 # **Demo information** 
 My demo will be submitted as a Jing capture along with this project.
