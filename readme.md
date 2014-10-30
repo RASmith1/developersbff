@@ -1,25 +1,33 @@
-## Laravel PHP Framework
+# ***CSCI E-15 Dynamic Web Applications***
+# ***Project P3: Laravel Basics/Developers BFF***
+ 
+# **Live URL**
+*http://developersbff.dynamicweb.me*
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+# **Description sentences**
+P3/Developer's BFF: This Laravel Basics project introduces the student developer to and immerses them 
+in learning the industry-standard skills needed to develop a a Laravel-based website.  These skills include planning the website pages and corresponding routes, installing Composer, incorporating dependencies obtained from packagist.org and/or github, committing modifications to github.com, setting up facades, adjusting environment settings, coding the routes, creating views and templates, using Blade syntax, passing data to views, testing the URLs, and deploying the new website.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+# **Demo information** 
+My demo will be submitted as a Jing capture along with this project.
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+# **Details for Teaching Team**
+No login is required.
+Extra Challenges:
+Make it look nice.
+Give it the option to include extra info for the generated users (gender).
+Input validation was implemented by using radio buttons and select boxes containing only valid values.
+(If nothing is selected, the defaulted settings are used).
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+# **Outside Code**
+Random User Generator
+The Random User Generator API being used is documented at and obtained from:
+http://www.philipwhitt.com/blog/2014/09/php-random-user-generator/40 and is further documented at http://randomuser.me/documentation.html.  Creative Commons license: 
+http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en 
+No Random User Generator API code was modified.
 
-## Official Documentation
-
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
-
-### Contributing To Laravel
-
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Lorem Ipsum Text Generator
+The Lorem Ipsum Text Generator being used is the Badcow Lorem Ipsum Generator with copyright as follows:
+Copyright (c) 2009, Mathew Tinsley (tinsley@tinsology.net) All rights reserved.
+This was pulled down from Packagist, at https://packagist.org/packages/badcow/lorem-ipsum.
+No Badcow Lorem Ipsum Generator code was modified.
