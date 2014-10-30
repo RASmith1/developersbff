@@ -9,7 +9,7 @@
 
 @section('content')
 
-<!-- This blade.php file makes use of the Form Helper syntax within a 
+<!-- This blade.php file makes use of the Blade-Form Helper syntax within a 
      framework of divs to aid in placement of the elements on the page. -->
 
 {{ Form::open(array('url' => 'list', 'method' => 'GET')) }}
@@ -19,7 +19,7 @@
         <p>
             Welcome to Developer's BFF. This application provides a few of the 
             web development tools that I've found helpful.  I hope you find them 
-            helpful too!  <a href='https://github.com/RASmith1/developersbff'>View on Github</a> 
+            helpful too!  <a href='https://github.com/RASmith1/developersbff'>View code for this application on Github.</a> 
         </p>
         <br>
     </div>
@@ -53,11 +53,13 @@
 
             <div class="summarycell">
                 <p>This  <span class="emphasis">Random User Generator</span> will generate the number of users 
-                that you specify, according to the gender that you specify. It 
-                returns a list that can be copied and pasted into your own application.</p>
+                that you specify, according to the gender that you specify. It returns a list that can 
+                be copied and pasted into your own application.  The packages used to implement this
+                Random User Generator were obtained from 
+                <a href='http://www.philipwhitt.com/blog/2014/09/php-random-user-generator/40'>Github - Random User Generator.</a> 
+                </p>
             </div>
         </div>
-        <br />
 
         <div class="row">
             <div class="selectionscell">
@@ -85,7 +87,9 @@
                 <p>This  <span class="emphasis">Lorem Ipsum Text Generator</span> will generate 
                 pseudo-Latin text for you, which can be copied and pasted in order to populate 
                 web sites during development. It returns one paragraph containing the generated 
-                ipsum lorem text containing the number of words specified.
+                ipsum lorem text containing the number of paragraphs specified.   The packages 
+                used to implement this were obtained from 
+                <a href='https://packagist.org/packages/badcow/lorem-ipsum'>Packagist - Badcow Lorem Ipsum Text Generator.</a> 
                 </p>
             </div>
         </div>
