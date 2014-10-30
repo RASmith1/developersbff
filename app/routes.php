@@ -1,85 +1,74 @@
 <?php
 
-// Homepage
+// Landing page
 Route::get('/', function() {
 	return View::make('index');
 });
 
-// List the number of Lorem Ipsum paragraphs specified by the user. Default is one.
-Route::get('/listtext/{paragraphs?}', function($paragraphs = '1') {
-	//return 'Number of Lorem Ipsum paragraphs to display is '.$paragraphs;
-	//return Apoutchika\
-	//return p>lorem.$paragraphs;
-	// Get the file
-	//$ipsumtext = p{lorem}*$paragraphs;
-
-	/*// Convert to an array
-	$books = json_decode($books, true);
-
-	// Return the file of books
-	return  Paste\Pre::render($books);
-	*/
-	//return emmet('lorem1');
+// Redirect to one of two routes, depending on whether user requested Random User Generator
+// or Lorem Ipsum Text Generator
+Route::get('/list', function() {
+	$user_submit = Input::get('user_submit');
+	$text_submit = Input::get('text_submit');
 	
-
-    //return emmet('ul > li*3') 
-	//return (p>lorem)*4;
-	//emmet('ul > li*3') => 
+	if ($user_submit == 'Submit') {
+		$gender = Input::get('gender');
+		$num_of_users = Input::get('num_of_users');
+	    return Redirect::route('listusers', array('num_of_users' => $num_of_users, 'gender' => $gender));
+   }
+   else if ($text_submit == 'Submit') {
+   		//return "I made it into list text_submit";
+       	// return "In list route: Text_submit was clicked." . "<br/>";
+   		$num_paragraphs = Input::get('num_paragraphs');
+        return Redirect::route('listtext', array('num_paragraphs' => $num_paragraphs));
+   }
+   else {
+   	   return "In list route: Neither submit seen as being clicked." . "<br/>";
+   }
 });
 
-//
-Route::get('/listusers/{number_of_users?}/{gender?}', function($number_of_users = '10', $gender = 'Both') {
 
+// List the number of Lorem Ipsum paragraphs specified by the user. Default is one.
+Route::get('/listtext', ['as' => 'listtext', function() {
+
+	$num_paragraphs = Input::get('num_paragraphs');
+
+	// The following code makes use of the Badcow Lorem Ipsum Generator with copyright as:
+	// Copyright (c) 2009, Mathew Tinsley (tinsley@tinsology.net) All rights reserved.
+	// This was pulled down from Packagist, at https://packagist.org/packages/badcow/lorem-ipsum.
+	$generator = new Badcow\LoremIpsum\Generator();
+	$paragraphs = $generator->getParagraphs($num_paragraphs);
+	return implode('<p>', $paragraphs);
+}]);
+
+
+Route::get('/listusers', ['as' => 'listusers', function() {
+	
+	
+	$gender = Input::get('gender');
+	$num_of_users = Input::get('num_of_users');
+	
 	// The Random User Generator API being used is documented at and obtained from:
 	// http://www.philipwhitt.com/blog/2014/09/php-random-user-generator/40
 	// and is further documented at http://randomuser.me/documentation.html.
 	// Creative Commons license: http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en
 	// No Random User Generator API code was modified.
 	$gen = new \RandomUser\Generator();
-	$user = $gen->getUsers($number_of_users);
+	$user = $gen->getUsers($num_of_users);
     
 	if ($gender == 'both')
 	{
-    	$user = $gen->getUsers($number_of_users);
+    	$user = $gen->getUsers($num_of_users);
     }	
 	elseif ($gender == 'female') 
 	{
-		$user = $gen->getFemales($number_of_users);
+		$user = $gen->getFemales($num_of_users);
 	}	
 	else
 	{
-		$user = $gen->getMales($number_of_users);
+		$user = $gen->getMales($num_of_users);
 	}
+    
+    return  Paste\Pre::render($user);
 
-	//return  Paste\Pre::render($user);
-	//return 'Number entered was '.$number_of_users.' and gender was '.$gender;
-	return  View::make('listusers')
-	 		 ->with('number_of_users', $number_of_users)
-			 ->with('user', $user);
-
-});
-
-// Display the form for the Lorem Ipsum text
-Route::get('add', function() {
-
-});
-
-// Process the form for the Lorem Ipsum text
-Route::post('add', function() {
-
-});
-
-
-
-Route::get('/data', function()
-{
-	// Get the file
-	$books = File::get(app_path().'/database/books.json');
-
-	// Convert to an array
-	$books = json_decode($books, true);
-
-	// Return the file of books
-	return  Paste\Pre::render($books);
-
-});
+}]);

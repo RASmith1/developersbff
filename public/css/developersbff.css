@@ -58,10 +58,10 @@ html {
     height: 100px;
 }
 
-#linkscontainer {
+.linkscontainer {
     text-align: left;
     list-style: none;
-    /*align-self: center;*/
+    align-self: center;
 }
 
 #paragraphscontainer {
@@ -77,17 +77,38 @@ html {
 }
 
 .container {
-    width: 90%;
+    width: 50%;
+}
+
+.tablecontainer {
+    display: table;
+    /*width: 50%;*/
 }
 
 .row {
     display: table-row;
-    text-align: left;
+    /*text-align: left;*/
 }
 
-.headercell {
+/*.choosehelpercell {
     display: table-cell;
-    width: 50%;
+    width: 4%;
+    height: 30px;
+    text-align: left;
+    font-weight: bold;
+}
+*/
+.selectionscell {
+    display: table-cell;
+    width: 46%;
+    height: 30px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.summarycell {
+    display: table-cell;
+    width: 54%;
     height: 30px;
     text-align: left;
     font-weight: bold;
@@ -104,14 +125,34 @@ h2 {
     text-align: left;
 }
 
-./*blankcell {
+.emphasis {
+    color: #CC0000;
+}
+
+/*.selectionscell {
+    display: table-cell;
+    width: 280px;
+    height: 40px;
+    text-align: left;
+}
+
+
+.summarycell {
+    display: table-cell;
+    width: 280px;
+    height: 40px;
+    text-align: left;
+}
+*/
+
+/*.summarycell {
     display: table-cell;
     width: 50%;
     height: 30px;
     text-align: left;
     font-weight: bold;
 }
-*/
+
 .descriptioncell {
     display: table-cell;
     width: 280px;
@@ -122,19 +163,12 @@ h2 {
 
 .formcell {
 	color: black;
-}
+}*/
 
 input[type="radio"] {
   margin-right: 7px;
 }
-/*
-.githubcell {
-    display: table-cell;
-    width: 280px;
-    height: 40px;
-    text-align: left;
-}
-*/
+
 
 /*#header {margin-top: 1em;}
 #header h1 { padding-left: 160px; padding-top: 20px; background-image: url(../images/flag.gif); background-repeat: no-repeat; background-position: left; height: 70px; background-color: #eeeeff;}
