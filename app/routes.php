@@ -1,9 +1,11 @@
 <?php
 
-require_once base_path().'/vendor/autoload.php';
+//require_once base_path().'/vendor/autoload.php';
 //require_once dirname(dirname(__FILE__)).'/vendor/autoload.php';
 use RandomUser\Generator;
 use RandomUser\User;
+
+//require_once '/path/to/Faker/src/autoload.php';
 
 // Landing page
 Route::get('/', function() {

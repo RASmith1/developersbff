@@ -6,7 +6,7 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"paste/pre": "dev-master",
-		"fliglio/web": "dev-master",
+		"Fliglio/Web": "dev-master",
 		"randomuser/generator": "dev-master",
 		"anlutro/curl": "dev-master",
 		"badcow/lorem-ipsum": "dev-master"
