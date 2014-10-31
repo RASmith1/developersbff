@@ -191,7 +191,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Pre'             => 'Paste\Pre',
-		'cURL'            => 'anlutro\cURL\Laravel\cURL' 
+		'cURL'            => 'anlutro\cURL\Laravel\cURL', 
 
 	),
 
