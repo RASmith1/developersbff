@@ -52,11 +52,11 @@
             </div>
 
             <div class="summarycell">
-                <p>This  <span class="emphasis">Random User Generator</span> will generate the number of users 
-                of users that you specify that you specify. It returns a list that can 
-                be copied and pasted into your own application.  The packages used to implement this
-                Random User Generator were obtained from 
-                <a href='http://www.philipwhitt.com/blog/2014/09/php-random-user-generator/40'>Github - Random User Generator.</a> 
+                <p>This  <span class="emphasis">Faker random user generator</span> will generate the number 
+                of users that you specify. It returns a list that can 
+                be copied and pasted for your own use.  The Faker packages used to implement this
+                random user generator were obtained from 
+                <a href='https://github.com/fzaninotto/Faker'>Github - Faker.</a> 
                 </p>
             </div>
         </div>
@@ -87,10 +87,9 @@
             </div>
             <div class="summarycell">
                 <p>This  <span class="emphasis">Lorem Ipsum Text Generator</span> will generate 
-                pseudo-Latin text for you, which can be copied and pasted in order to populate 
-                web sites during development. It returns one paragraph containing the generated 
-                ipsum lorem text containing the number of paragraphs specified.   The packages 
-                used to implement this were obtained from 
+                pseudo-Latin text for you, which you can copy and paste in order to populate 
+                web sites during development.  It returns the number of generated lorem ipsum
+                paragraphs that you specify.  The packages used to implement this were obtained from 
                 <a href='https://packagist.org/packages/badcow/lorem-ipsum'>Packagist - Badcow Lorem Ipsum Text Generator.</a> 
                 </p>
             </div>
