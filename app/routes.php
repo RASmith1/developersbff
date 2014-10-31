@@ -57,7 +57,7 @@ Route::get('/listusers', ['as' => 'listusers', function() {
 	// Creative Commons license: http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en
 	// No Random User Generator API code was modified.
 	//$gen = new \RandomUser\Generator();
-	$gen = new Generator();
+	$gen = new \RandomUser\Generator();
 
 	$user = $gen->getUsers($num_of_users);
     
