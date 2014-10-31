@@ -28,11 +28,11 @@
         <div class="row">
             <div class="selectionscell">
                 <h2 class="header">Random User Generator</h2>
-                {{ Form::label('gender', 'Gender of users to be generated') }}
+               <!--  {{ Form::label('gender', 'Gender of users to be generated') }}
                 <br />{{ Form::radio('gender', 'female') }} Female
                 <br />{{ Form::radio('gender', 'male') }} Male
-                <br />{{ Form::radio('gender', 'both', true) }} Both
-               
+                <br />{{ Form::radio('gender', 'both', true) }} Both -->
+    
                 <br />{{ Form::label('num_of_users_label', 'Number of users to generate (1-40 by 5s):') }} 
                       {{ Form::select('num_of_users', array( 
                             '5' => '5', 
@@ -53,17 +53,19 @@
 
             <div class="summarycell">
                 <p>This  <span class="emphasis">Random User Generator</span> will generate the number of users 
-                that you specify, according to the gender that you specify. It returns a list that can 
+                of users that you specify that you specify. It returns a list that can 
                 be copied and pasted into your own application.  The packages used to implement this
                 Random User Generator were obtained from 
                 <a href='http://www.philipwhitt.com/blog/2014/09/php-random-user-generator/40'>Github - Random User Generator.</a> 
                 </p>
             </div>
         </div>
+        <br />
 
         <div class="row">
             <div class="selectionscell">
                 <h2 class="header">Lorem Ipsum Text Generator</h2>
+                      <br />
                       {{ Form::label('num_paragraphs_label', 'Number of paragraphs to generate (1-10):') }} 
                       {{ Form::select('num_paragraphs', array( 
                             '1' => '1', 

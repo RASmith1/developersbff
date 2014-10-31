@@ -2,10 +2,10 @@
 
 //require_once base_path().'/vendor/autoload.php';
 //require_once dirname(dirname(__FILE__)).'/vendor/autoload.php';
-use RandomUser\Generator;
-use RandomUser\User;
+/*use RandomUser\Generator;
+use RandomUser\User;*/
 
-//require_once '/path/to/Faker/src/autoload.php';
+require_once base_path().'/vendor/fzaninotto/faker/src/autoload.php';
 
 // Landing page
 Route::get('/', function() {
@@ -54,13 +54,12 @@ Route::get('/listusers', ['as' => 'listusers', function() {
 	$gender = Input::get('gender');
 	$num_of_users = Input::get('num_of_users');
 	
-	// The Random User Generator API being used is documented at and obtained from:
-	// http://www.philipwhitt.com/blog/2014/09/php-random-user-generator/40
-	// and is further documented at http://randomuser.me/documentation.html.
-	// Creative Commons license: http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en
-	// No Random User Generator API code was modified.
+	// This is a different Random User Generator that I couldn't 
+	// get to work on the server because of a fatal exception
+	// on Fliglio.curl_init();
 	//$gen = new \RandomUser\Generator();
-	$gen = new \RandomUser\Generator();
+
+	/*$gen = new \RandomUser\Generator();
 
 	$user = $gen->getUsers($num_of_users);
     
@@ -75,8 +74,45 @@ Route::get('/listusers', ['as' => 'listusers', function() {
 	else
 	{
 		$user = $gen->getMales($num_of_users);
+	}*/
+    
+	// Faker is the name of the Random User Generator API being used.
+	// It is documented at and obtained from:
+	// https://packagist.org/packages/fzaninotto/faker
+	// License is held by François Zaninotto and is listed at: 
+	// https://github.com/fzaninotto/Faker/blob/master/LICENSE
+	// use the factory to create a Faker\Generator instance
+	$faker = Faker\Factory::create();
+
+	$faker->addProvider(new \Faker\Provider\en_US\Person($faker));
+    
+	$users = array();
+
+	for ($i=0; $i < $num_of_users; $i++) {
+		$users [$i] = array();
+		if ($gender == 'Female') {
+        	$users [$i]['name'] = $faker->name('Female');
+		}
+		else if ($gender == 'Male') {
+			$users [$i]['name'] = $faker->name('Male');
+		}
+		else {
+			$users [$i]['name'] = $faker->name();
+		}
+		
+        $users [$i]['email']         = $faker->email;
+        $users [$i]['phoneNumber']   = $faker->phoneNumber;
+        $users [$i]['streetAddress'] = $faker->streetAddress;
+        $users [$i]['city']          = $faker->city;
+        $users [$i]['state']         = $faker->state;
+        $users [$i]['postcode']      = $faker->postcode;
 	}
     
-    return  Paste\Pre::render($user);
+	// generate data by accessing properties
+	//echo $faker->name;
+  // 'Lucy Cechtelar';
+	//echo $faker->address;
+    
+    return  Paste\Pre::render($users);
 
 }]);

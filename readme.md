@@ -15,7 +15,6 @@ My demo will be submitted as a Jing capture along with this project.
 No login is required.
 Extra Challenges:
 Make it look nice.
-Give it the option to include extra info for the generated users (gender).
 Input validation was implemented by using radio buttons and select boxes containing only valid values.
 (If nothing is selected, the defaulted settings are used).
 
