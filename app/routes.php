@@ -1,5 +1,9 @@
 <?php
 
+// require_once dirname(dirname(__FILE__)).'/vendor/autoload.php';
+use RandomUser\Generator;
+use RandomUser\User;
+
 // Landing page
 Route::get('/', function() {
 	return View::make('index');
@@ -43,8 +47,7 @@ Route::get('/listtext', ['as' => 'listtext', function() {
 
 
 Route::get('/listusers', ['as' => 'listusers', function() {
-	
-	
+		
 	$gender = Input::get('gender');
 	$num_of_users = Input::get('num_of_users');
 	
@@ -53,7 +56,9 @@ Route::get('/listusers', ['as' => 'listusers', function() {
 	// and is further documented at http://randomuser.me/documentation.html.
 	// Creative Commons license: http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en
 	// No Random User Generator API code was modified.
-	$gen = new \RandomUser\Generator();
+	//$gen = new \RandomUser\Generator();
+	$gen = new Generator();
+
 	$user = $gen->getUsers($num_of_users);
     
 	if ($gender == 'both')
