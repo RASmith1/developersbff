@@ -9,7 +9,8 @@ P3/Developer's BFF: This Laravel Basics project introduces the student developer
 in learning the industry-standard skills needed to develop a Laravel-based website.  These skills include planning the website pages and corresponding routes, installing Composer, incorporating dependencies obtained from packagist.org and/or github, committing modifications to github.com, setting up facades, adjusting environment settings, coding the routes, creating views and templates, using Blade syntax, passing data to views, testing the URLs, and deploying the new website to the server.
 
 # **Demo information** 
-My demo will be submitted as a Jing capture along with this project.
+My demo is a Jing capture at http://screencast.com/t/kbVPiToljvyJ .  I did have to create this three
+times, and when I go to the link that it put on my clipboard, it brings me to Jing, but I don't see the screen cast, which I thought I would.  If you can't see it, please email me at bucknbeck@verizon.net.  I'll try to compress my local copy and send it to you.  Thanks.
 
 # **Details for Teaching Team**
 No login is required.
